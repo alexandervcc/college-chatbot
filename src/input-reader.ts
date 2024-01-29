@@ -5,16 +5,16 @@ const cmd = createInterface({
   output: process.stdout,
 });
 
-const question = async (prompt: string) => {
+const question = async (prompt: string): Promise<string> => {
   return new Promise((resolve) => {
     cmd.question(prompt, resolve);
   });
 };
 
-export const getUserInput = async () => {
-  const inputText = await question("Enter some text: ");
+export const getUserInput = async (): Promise<string> => {
+  const inputText = await question("???: ");
   //cmd.close();
-  return inputText;
+  return inputText.toString();
 };
 
 export default {};
