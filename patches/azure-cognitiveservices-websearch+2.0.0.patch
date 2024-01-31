@@ -1,0 +1,13 @@
+diff --git a/node_modules/azure-cognitiveservices-websearch/lib/webSearchClient.js b/node_modules/azure-cognitiveservices-websearch/lib/webSearchClient.js
+index 2eae902..c1d75de 100644
+--- a/node_modules/azure-cognitiveservices-websearch/lib/webSearchClient.js
++++ b/node_modules/azure-cognitiveservices-websearch/lib/webSearchClient.js
+@@ -43,7 +43,7 @@ class WebSearchClient extends ServiceClient {
+     super(credentials, options);
+ 
+     this.endpoint = 'https://api.cognitive.microsoft.com';
+-    this.baseUri = '{Endpoint}/bing/v7.0';
++    this.baseUri = '{Endpoint}/v7.0';
+     this.credentials = credentials;
+ 
+     let packageInfo = this.getPackageJsonInfo(__dirname);
