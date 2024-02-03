@@ -13,7 +13,7 @@ const question = async (prompt: string): Promise<string> => {
 };
 
 export const getUserInput = async (): Promise<string> => {
-  const inputText = await question("???: ");
+  const inputText = await question("???:   ");
   return inputText.toString();
 };
 

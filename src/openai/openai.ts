@@ -15,12 +15,39 @@ export const sendPrompt = async (message: string) => {
     messages: [
       {
         role: "system",
-        content: prompts.GENERAL(
-          "Cheems was a shiba inu dog, it was female. It died at 12 years old on 2023. It was an amazing dog, as it created a whole quantity of memes. when she died, all the world was too sad."
-        ), 
+        content: prompts.GENERAL("https://www.epn.edu.ec"),
       },
-      { role: "user", content: message },
+      { role: "user", content: `'''${message}'''` },
     ],
-    model: "gpt-4",
+    model: "gpt-4-1106-preview",
+    /* tools: [
+      {
+        type: "function",
+        function: {
+          name: "parse_data",
+          description: "Parse raw HTML data nicely",
+          parameters: {
+            type: "object",
+            properties: {
+              data: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    title: { type: "string" },
+                    rating: { type: "number" },
+                    price: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    ],
+    tool_choice: {
+      type: "function",
+      function: { name: "parse_data" },
+    }, */
   });
 };

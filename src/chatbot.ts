@@ -14,13 +14,18 @@ export const executeChatbot = async () => {
 
       const chatbotResponse = await sendPrompt(userInput);
       const chatbotMessage = getChatbotMessage(chatbotResponse);
+      // console.log("GPT: ", JSON.stringify(chatbotResponse));
+      // @ts-ignore
+      // console.log("GPT: ", JSON.parse(chatbotResponse?.choices[0]?.message?.tool_calls[0]?.function?.arguments));
       console.log("GPT: ", chatbotMessage);
+      
+      
       messagesHistory.push(
         { role: "assistant", content: chatbotMessage },
         { role: "user", content: userInput }
       );
 
-      await makeSearchRequest(userInput);
+      // await makeSearchRequest(userInput);
     } catch (error) {
       console.error("ERROR: ", error);
     }
