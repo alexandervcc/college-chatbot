@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.10",
+    "@types/node": "^20.11.19",
     "nodemon": "^3.0.3",
     "patch-package": "^8.0.0",
     "ts-node": "^10.9.2",
@@ -21,6 +21,7 @@
   "dependencies": {
     "azure-cognitiveservices-websearch": "^2.0.0",
     "dotenv": "^16.4.1",
+    "llamaindex": "^0.1.11",
     "ms-rest-azure": "^3.0.2",
     "openai": "^4.26.0"
   }
