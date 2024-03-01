@@ -1,4 +1,4 @@
-import fs from "fs/promises";
+import fs from "fs/promises"; 
 import { Document, VectorStoreIndex } from "llamaindex";
 
 export async function llamaIndex() {
